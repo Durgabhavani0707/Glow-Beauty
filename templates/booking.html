@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>Booking Page</h1>
+
+<form method="post" action="/booking">
+
+<input type="text" name="name" placeholder="Your Name" required><br><br>
+
+<input type="text" name="phone" placeholder="Phone Number" required><br><br>
+
+<select name="service" required>
+<option value="">Select Service</option>
+<option>Bridal Makeup</option>
+<option>Party Makeup</option>
+<option>Mehendi</option>
+</select><br><br>
+
+<input type="date" name="date" required><br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+{% if success %}
+<p style="color:green;">Booking Success ✅</p>
+{% endif %}
+
+</body>
+</html>

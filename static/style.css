@@ -1,0 +1,392 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ffe6f0, #fff);
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+nav h2 {
+    color: #ff4d88;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+nav a:hover {
+    color: #ff4d88;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 80px;
+}
+
+.hero h1 {
+    color: #ff4d88;
+    font-size: 40px;
+}
+
+/* Container */
+.container {
+    padding: 40px;
+    text-align: center;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Button */
+button {
+    background: #ff4d88;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e6005c;
+}
+
+/* Form */
+form {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    margin: auto;
+    border-radius: 15px;
+}
+.hero {
+    background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9');
+    background-size: cover;
+    color: white;
+    padding: 120px;
+}
+/* Animation */
+.card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.2s; }
+.card:nth-child(2) { animation-delay: 0.4s; }
+.card:nth-child(3) { animation-delay: 0.6s; }
+.card:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Images */
+.card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+}
+
+/* Button hover animation */
+button:hover {
+    transform: scale(1.1);
+}
+body {
+    margin:0;
+    font-family:Poppins;
+    background:linear-gradient(to right,#ffe6f0,#fff);
+}
+
+nav {
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+    background:white;
+}
+
+nav h2 { color:#ff4d88; }
+
+nav a {
+    margin:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.hero {
+    background:url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9');
+    background-size:cover;
+    color:white;
+    padding:120px;
+    text-align:center;
+}
+
+.container { padding:40px; text-align:center; }
+
+.grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:20px;
+}
+
+/* CARD */
+.card {
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 20px rgba(0,0,0,0.1);
+    transform:translateY(20px);
+    opacity:0;
+    animation:fadeUp 0.8s ease forwards;
+}
+
+.card img {
+    width:100%;
+    height:160px;
+    object-fit:cover;
+}
+
+.card h3 { margin:10px; }
+
+.card p { margin:10px; }
+
+/* BUTTON */
+button {
+    margin:10px;
+    padding:10px;
+    background:#ff4d88;
+    color:white;
+    border:none;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+button:hover {
+    transform:scale(1.1);
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    to {
+        transform:translateY(0);
+        opacity:1;
+    }
+}
+/* Booking card */
+.booking-card {
+    width: 320px;
+    margin: auto;
+    padding: 20px;
+    animation: popUp 0.6s ease;
+}
+
+/* Inputs */
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Animation */
+@keyframes popUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.booking-card {
+    width: 320px;
+    margin: auto;
+    padding: 20px;
+    animation: popUp 0.6s ease;
+}
+
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/* HERO FIX */
+.hero {
+    background: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9');
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    color: white;
+}
+
+/* LEFT SIDE TEXT */
+.hero-content {
+    max-width: 500px;
+}
+
+/* TITLE ANIMATION */
+.title {
+    font-size: 45px;
+    color: #ff4d88;
+    animation: slideLeft 1s ease;
+}
+
+/* TEXT ANIMATION */
+.hero p {
+    animation: fadeIn 2s ease;
+}
+
+/* BUTTON ANIMATION */
+.hero button {
+    margin-top: 20px;
+    animation: popUp 1.5s ease;
+}
+
+/* KEYFRAMES */
+@keyframes slideLeft {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes popUp {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.booking-card {
+    width: 320px;
+    margin: auto;
+    padding: 20px;
+    animation: popUp 0.6s ease;
+}
+
+input, select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+@keyframes popUp {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+/* REMOVE DEFAULT SPACE */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* NAV FIX */
+nav {
+    margin: 0;
+}
+
+/* HERO FIX */
+.hero {
+    margin: 0;
+    padding-top: 0;
+}
+.hero {
+    height: 100vh;   /* full screen */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* GRID LAYOUT */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* CARD BOX */
+.card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* IMAGE */
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.card h3 {
+    margin: 10px;
+}
+
+.card p {
+    color: #ff4d88;
+    font-weight: bold;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* BUTTON */
+.card button {
+    margin: 10px;
+    padding: 8px 15px;
+    background: #ff4d88;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}

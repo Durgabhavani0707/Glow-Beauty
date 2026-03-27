@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+<h2>Glow Beauty 💄</h2>
+<div>
+<a href="/">Home</a>
+<a href="/services">Services</a>
+<a href="/products">Products</a>
+<a href="/cart">Cart</a>
+<a href="/booking">Book</a>
+</div>
+</nav>
+
+<div class="container">
+<h1>Our Products</h1>
+
+<div class="grid">
+{% for p in products %}
+<div class="card">
+<h3>{{ p.name }}</h3>
+<p>₹{{ p.price }}</p>
+<a href="/add_to_cart/{{ p.id }}">
+<button>Add to Cart</button>
+</a>
+</div>
+{% endfor %}
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<nav>
+<h2>Glow Beauty 💄</h2>
+<div>
+<a href="/">Home</a>
+<a href="/products">Products</a>
+</div>
+</nav>
+
+<div class="container">
+<h1>Your Cart</h1>
+
+{% for item in cart %}
+<div class="card">
+<p>{{ item.name }} - ₹{{ item.price }}</p>
+</div>
+{% endfor %}
+
+</div>
+
+</body>
+</html>
