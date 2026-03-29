@@ -2,12 +2,15 @@
 <html>
 <head>
 <link rel="stylesheet" href="/static/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<nav>
-<h2>Glow Beauty 💄</h2>
-<div>
+<!-- NAVBAR -->
+<nav class="navbar">
+<h2 class="logo">Glow Beauty 💄</h2>
+<div class="nav-links">
 <a href="/">Home</a>
 <a href="/services">Services</a>
 <a href="/products">Products</a>
@@ -16,37 +19,53 @@
 </div>
 </nav>
 
-<div class="hero">
-
+<!-- HERO -->
+<section class="hero">
 <div class="hero-content">
     <h1 class="title">Glow Like a Queen ✨</h1>
     <p>Professional Makeup, Mehendi & Beauty Services</p>
-    <a href="/services"><button>Explore Services</button></a>
+    <a href="/services"><button class="btn">Explore Services</button></a>
 </div>
+</section>
 
-</div>
-
-<div class="container">
-<h2>Why Choose Us?</h2>
+<!-- SERVICES PREVIEW -->
+<section class="section">
+<h2>Our Services 💄</h2>
 
 <div class="grid">
+{% for s in services[:6] %}
 <div class="card">
-<h3>💄 Expert Makeup</h3>
-<p>Professional artists with latest trends</p>
+<h3>{{ s.name }}</h3>
+<p>₹{{ s.price }}</p>
+</div>
+{% endfor %}
 </div>
 
+<a href="/services"><button class="btn">View All Services</button></a>
+</section>
+
+<!-- PRODUCTS PREVIEW -->
+<section class="section">
+<h2>Beauty Products 🛍️</h2>
+
+<div class="grid">
+{% for p in products[:6] %}
 <div class="card">
-<h3>✨ Premium Products</h3>
-<p>We use top branded cosmetics</p>
+<h3>{{ p.name }}</h3>
+<p>₹{{ p.price }}</p>
+</div>
+{% endfor %}
 </div>
 
-<div class="card">
-<h3>💖 Affordable Price</h3>
-<p>Best quality at best price</p>
-</div>
-</div>
+<a href="/products"><button class="btn">View All Products</button></a>
+</section>
 
-</div>
+<!-- BOOK NOW -->
+<section class="cta">
+<h2>Book Your Appointment 💗</h2>
+<p>Get professional beauty services at your doorstep</p>
+<a href="/booking"><button class="btn">Book Now</button></a>
+</section>
 
 </body>
 </html>
