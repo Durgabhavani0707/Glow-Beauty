@@ -8,6 +8,7 @@ A modern full-stack beauty services website built using **Flask, HTML, CSS, and 
 
 👉 https://glow-beauty.onrender.com/
 
+
  ✨ **Features**
 
 * 💄 Beauty Services (Makeup, Mehendi, Hair Styling)
