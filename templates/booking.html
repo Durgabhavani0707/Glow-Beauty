@@ -1,35 +1,181 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Book Service</title>
 <link rel="stylesheet" href="/static/style.css">
+
+<style>
+body {
+    margin:0;
+    font-family:'Segoe UI';
+    background:#f4f6f9;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(90deg,#6a1b9a,#3949ab);
+    padding:15px;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+}
+
+.navbar a {
+    color:white;
+    margin:0 15px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+/* CONTAINER FIX */
+.container {
+    display:flex;
+    flex-direction:column;   /* 🔥 important */
+    align-items:center;
+    padding:20px;
+}
+
+/* CARD */
+.card {
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    width:350px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FORM */
+input, select {
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+button {
+    width:100%;
+    padding:10px;
+    background:#6a1b9a;
+    color:white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover {
+    background:#4a148c;
+}
+
+.success {
+    color:green;
+    text-align:center;
+    margin-top:10px;
+}
+
+/* TABLE */
+table {
+    width:90%;
+    margin-top:20px;
+    border-collapse: collapse;
+    background:white;
+}
+
+th, td {
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+th {
+    background:#6a1b9a;
+    color:white;
+}
+</style>
+
 </head>
 
 <body>
 
-<h1>Booking Page</h1>
+<!-- NAVBAR -->
+<div class="navbar">
+    <div><b>Glow Beauty</b></div>
+    <div>
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/products">Products</a>
+        <a href="/cart">Cart</a>
+        <a href="/booking">Booking</a>
+    </div>
+</div>
+
+<!-- FORM -->
+<div class="container">
+
+<div class="card">
+<h2>Book Your Service 💄</h2>
 
 <form method="post" action="/booking">
 
-<input type="text" name="name" placeholder="Your Name" required><br><br>
-
-<input type="text" name="phone" placeholder="Phone Number" required><br><br>
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="text" name="phone" placeholder="Phone Number" required>
 
 <select name="service" required>
 <option value="">Select Service</option>
 <option>Bridal Makeup</option>
 <option>Party Makeup</option>
-<option>Mehendi</option>
-</select><br><br>
+<option>Engagement Makeup</option>
+<option>Reception Makeup</option>
+<option>Hair Styling</option>
+<option>Facial</option>
+<option>Hair Spa</option>
+<option>Pre-Bridal Package</option>
+<option>Full Body Waxing</option>
+<option>Manicure & Pedicure</option>
+<option>Skin Polishing</option>
+</select>
 
-<input type="date" name="date" required><br><br>
+<input type="date" name="date" required>
 
-<button type="submit">Submit</button>
+<button type="submit">Book Now</button>
 
 </form>
 
 {% if success %}
-<p style="color:green;">Booking Success ✅</p>
+<p class="success">Booking Successful ✅</p>
 {% endif %}
+
+</div>
+
+<!-- BOOKINGS TABLE -->
+<h3>Your Bookings 📋</h3>
+
+<table>
+<tr>
+<th>Name</th>
+<th>Phone</th>
+<th>Service</th>
+<th>Date</th>
+</tr>
+
+{% if bookings %}
+    {% for b in bookings %}
+    <tr>
+    <td>{{ b["name"] }}</td>
+    <td>{{ b["phone"] }}</td>
+    <td>{{ b["service"] }}</td>
+    <td>{{ b["date"] }}</td>
+    </tr>
+    {% endfor %}
+{% else %}
+<tr>
+<td colspan="4">No bookings yet ❌</td>
+</tr>
+{% endif %}
+
+</table>
+
+</div>
 
 </body>
 </html>

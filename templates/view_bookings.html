@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bookings</title>
+
+<style>
+body {
+    font-family: 'Segoe UI';
+    background: #f4f6f9;
+    padding:20px;
+}
+
+table {
+    width:100%;
+    border-collapse: collapse;
+    background:white;
+}
+
+th, td {
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+th {
+    background:#6a1b9a;
+    color:white;
+}
+</style>
+
+</head>
+
+<body>
+    <div style="background:#6a1b9a; padding:15px; color:white; display:flex; justify-content:space-between;">
+    <div><b>Glow Beauty</b></div>
+    <div>
+        <a href="/" style="color:white; margin:10px;">Home</a>
+        <a href="/services" style="color:white; margin:10px;">Services</a>
+        <a href="/products" style="color:white; margin:10px;">Products</a>
+        <a href="/cart" style="color:white; margin:10px;">Cart</a>
+        <a href="/booking" style="color:white; margin:10px;">Booking</a>
+        <a href="/view_bookings" style="color:white; margin:10px;">Bookings</a>
+    </div>
+</div>
+
+<h2>All Bookings 📋</h2>
+
+<table>
+<tr>
+<th>Name</th>
+<th>Phone</th>
+<th>Service</th>
+<th>Date</th>
+</tr>
+
+{% for b in bookings %}
+<tr>
+<td>{{ b["name"] }}</td>
+<td>{{ b["phone"] }}</td>
+<td>{{ b["service"] }}</td>
+<td>{{ b["date"] }}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>
